@@ -1,4 +1,5 @@
 // chunks of code that are commented out are just backups and figuring out things
+// just a test base, don't use this
 
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
-    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    // List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     
     bool canMove = true;
     bool isMoving = false;
