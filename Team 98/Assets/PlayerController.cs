@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] float idleFriction = 0.9f;
 
     public ContactFilter2D movementFilter;
-    public SwordAttack swordAttack;
+    // public SwordAttack swordAttack;
 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
@@ -105,22 +105,6 @@ public class PlayerController : MonoBehaviour
         //GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
     }
     
-    public void SwordAttack()
-    {
-        LockMovement();
-        if(spriteRenderer.flipX == true) {
-            swordAttack.AttackLeft();
-        } else {
-            swordAttack.AttackRight();
-        }
-    }
-
-    public void EndSwordAttack()
-    {
-        UnlockMovement();
-        swordAttack.StopAttack();
-    }
-
     // Stops character movement during animations
     public void LockMovement() 
     {
