@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public GameObject settingsPanel;
     [SerializeField] float sceneLoadDelay = 2f;
     public void LoadGame()
     {
@@ -31,5 +32,15 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Quitting Game...");
         Application.Quit();
+    }
+
+    public void OpenSettings()
+    {
+        settingsPanel.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
     }
 }
