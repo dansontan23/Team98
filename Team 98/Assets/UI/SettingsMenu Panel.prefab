@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7767333101989676358}
   - component: {fileID: 398045778728432110}
   m_Layer: 5
-  m_Name: Settings Menu Panel
+  m_Name: SettingsMenu Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

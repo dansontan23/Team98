@@ -752,7 +752,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -830,7 +830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4743665290767975088, guid: ca7fb2361c253f948bee91869a235d93, type: 3}
       propertyPath: m_Name
-      value: Pause Menu Panel
+      value: PauseMenu Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4743665290767975088, guid: ca7fb2361c253f948bee91869a235d93, type: 3}
       propertyPath: m_IsActive
