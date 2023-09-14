@@ -39,6 +39,11 @@ public class LevelManager : MonoBehaviour
         settingsPanel.SetActive(true);
     }
 
+    public void OpenHowToPlay()
+    {
+        settingsPanel.SetActive(true);
+    }
+
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
