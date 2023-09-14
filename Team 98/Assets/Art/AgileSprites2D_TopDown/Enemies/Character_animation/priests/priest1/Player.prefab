@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1060618687644602705}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: SpawnLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,9 +47,9 @@ GameObject:
   - component: {fileID: 78029492950311392}
   - component: {fileID: 6166969286821396374}
   - component: {fileID: 7039254123171279755}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Player
+  m_TagString: enemyPriest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2057522810, guid: 1820c065855de5b4d999a609cb9c7d12, type: 3}
+  m_Sprite: {fileID: -504046338, guid: 69b6e9048b2540742962347b1c506ff9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5225510534600719213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fc4c3fcb317b5648967022ecad5f491, type: 3}
   m_Name: 
@@ -243,7 +243,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -262,7 +262,7 @@ Animator:
   m_GameObject: {fileID: 5225510534600719213}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96e1f5fda832698468e1c4b90bfa476f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2cf98bc1f63f80948995f07bcac06d56, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
