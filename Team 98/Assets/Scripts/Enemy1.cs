@@ -9,6 +9,7 @@ public class Enemy1 : MonoBehaviour
     [SerializeField] float shootingDistance = 5f; // Distance at which the enemy starts shooting.
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float shootingInterval = 2f;
+    [SerializeField] private int meleeDamageAmount = 10;
     
     private void Start()
     {
@@ -58,17 +59,14 @@ public class Enemy1 : MonoBehaviour
         bulletScript.SetDirection(directionToPlayer);
     }
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            
-            StopMoving();
-            
+            Damageable playerDamageable = collision.gameObject.GetComponent<Damageable>();
+            if (playerDamageable != null)
+            {
+                playerDamageable.TakeDamage(meleeDamageAmount);
+            }
         }
-
-        void StopMoving()
-        {
-            // moveSpeed = 0f;
-            // Any other logic you want to happen when the enemy stops, e.g.:
-            // Stop the ShootingRoutine coroutine, change enemy's state, etc.
-        }
-
+    }
 }
