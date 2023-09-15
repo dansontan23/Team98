@@ -7,13 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     
     [SerializeField] float moveSpeed = 150f;
+    [SerializeField] private int swordDamageAmount = 20;
     public float collisionOffset = 0.05f;
     //[SerializeField] float maxSpeed = 8f;
     //[SerializeField] float idleFriction = 0.9f;
 
     public ContactFilter2D movementFilter;
     // public SwordAttack swordAttack;
-
+    
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
@@ -95,6 +96,20 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetInteger("swordAttackIndex", Random.Range(0, 3));
         animator.SetTrigger("swordAttack");
+
+        // Find nearby enemies and deal damage
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f); // Assuming sword attack range is 1 unit
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("enemy"))
+            {
+                Damageable enemyDamageable = hit.GetComponent<Damageable>();
+                if (enemyDamageable != null)
+                {
+                    enemyDamageable.TakeDamage(swordDamageAmount);
+                }
+            }
+        }
     }
     
     // Right mouse button (for now) for bow attack 
