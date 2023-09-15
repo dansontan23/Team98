@@ -19,9 +19,11 @@ public class RoomTemplates : MonoBehaviour
     public int maxRooms = 10;
     public int roomCount = 0;
 
-    [SerializeField] float waitTime = 100f;
+    [SerializeField] float waitTime = 10f;
     private bool spawnedBoss = false;
     public GameObject boss;
+
+    public RoomLayouts roomLayouts;
 
     void Start()
     {
@@ -31,6 +33,7 @@ public class RoomTemplates : MonoBehaviour
     void StartRoomGeneration()
     {
         int rand = Random.Range(0, startingRooms.Length);
+        roomLayouts = GameObject.FindGameObjectWithTag("Layouts").GetComponent<RoomLayouts>();
         Instantiate(startingRooms[rand], transform.position, Quaternion.identity);
     }
 
@@ -38,7 +41,7 @@ public class RoomTemplates : MonoBehaviour
     {
         if(waitTime <= 0 && spawnedBoss == false)
         {
-            Debug.Log("enough rooms were spawned");
+            Destroy(roomLayouts.layouts[roomCount-2]);
             Instantiate(boss, rooms[roomCount-1].transform.position, Quaternion.identity);
             spawnedBoss = true;
             DeleteSpawns(); 
@@ -64,7 +67,6 @@ public class RoomTemplates : MonoBehaviour
         foreach(RoomSpawner spawn in spawns)
         {
             Destroy(spawn.gameObject);
-            Debug.Log("deleted all spawns");
         }
     }
 }

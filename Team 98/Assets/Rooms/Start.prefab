@@ -1910,7 +1910,7 @@ GameObject:
   - component: {fileID: 166739562295654633}
   - component: {fileID: 3577164803916367626}
   m_Layer: 0
-  m_Name: Boss Room
+  m_Name: Start
   m_TagString: Layout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
