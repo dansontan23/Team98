@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  damageAmount: 10
 --- !u!61 &741026842251159221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2844193006605342350}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 1
+  m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
