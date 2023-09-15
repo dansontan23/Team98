@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7971e50cc7536a1448bf35ced1ca1b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5057426628329554958, guid: b5654c8b54e023c4fb7f0fbc05c24e4c, type: 3}
   moveSpeed: 5
   startFollowingDistance: 10
   shootingDistance: 5
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 2844193006605342350, guid: 2f5f2f8189ec66944af086d5d412fb0f, type: 3}
   shootingInterval: 2
   meleeDamageAmount: 10
 --- !u!50 &8891910281587144171

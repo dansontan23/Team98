@@ -7,12 +7,14 @@ public class RoomSpawner : MonoBehaviour
     public int openingDirection;
 
     private RoomTemplates templates;
+    private RoomLayouts roomLayouts;
     private int rand;
     private bool spawned = false;
     
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        roomLayouts = GameObject.FindGameObjectWithTag("Layouts").GetComponent<RoomLayouts>();
         Invoke("Spawn", 0.12f);
     }
 
@@ -22,6 +24,7 @@ public class RoomSpawner : MonoBehaviour
         {
             if(spawned == false)
             {
+                
                 if(openingDirection == 0)
                 {
                     spawned = true;
@@ -30,22 +33,31 @@ public class RoomSpawner : MonoBehaviour
                 {
                     rand = Random.Range(0, templates.bottomRooms.Length);
                     Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+                    rand = Random.Range(0, roomLayouts.allLayouts.Length);
+                    Instantiate(roomLayouts.allLayouts[rand], transform.position, roomLayouts.allLayouts[rand].transform.rotation);
                 }
                 else if(openingDirection == 2)
                 {
                     rand = Random.Range(0, templates.topRooms.Length);
                     Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
+                    rand = Random.Range(0, roomLayouts.allLayouts.Length);
+                    Instantiate(roomLayouts.allLayouts[rand], transform.position, roomLayouts.allLayouts[rand].transform.rotation);
                 }
                 else if(openingDirection == 3)
                 {
                     rand = Random.Range(0, templates.leftRooms.Length);
                     Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+                    rand = Random.Range(0, roomLayouts.allLayouts.Length);
+                    Instantiate(roomLayouts.allLayouts[rand], transform.position, roomLayouts.allLayouts[rand].transform.rotation);
                 }
                 else if(openingDirection == 4)
                 {
                     rand = Random.Range(0, templates.rightRooms.Length);
                     Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+                    rand = Random.Range(0, roomLayouts.allLayouts.Length);
+                    Instantiate(roomLayouts.allLayouts[rand], transform.position, roomLayouts.allLayouts[rand].transform.rotation);
                 }
+                
                 templates.Counter();
                 spawned = true;
             }
@@ -56,7 +68,6 @@ public class RoomSpawner : MonoBehaviour
             if(spawned == false)
             {
                 Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-                Debug.Log("Hello i just spawned a door for no reason");
                 spawned = true;
             }
         }
