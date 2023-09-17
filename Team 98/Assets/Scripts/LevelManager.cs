@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public GameObject settingsPanel;
+    public GameObject HowToPlayPanel;
+    public GameObject CreditsPanel;
+   
+    
     [SerializeField] float sceneLoadDelay = 2f;
     public void LoadGame()
     {
@@ -42,5 +46,25 @@ public class LevelManager : MonoBehaviour
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
+    }
+
+    public void OpenHowToPlay()
+    {
+        HowToPlayPanel.SetActive(true);
+    }
+
+    public void CloseHowToPlay()
+    {
+        HowToPlayPanel.SetActive(false);
+    }
+
+    public void OpenCredits()
+    {
+        CreditsPanel.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        CreditsPanel.SetActive(false);
     }
 }
