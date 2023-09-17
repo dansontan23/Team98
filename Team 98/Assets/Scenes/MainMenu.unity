@@ -6712,7 +6712,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.6715, y: -189.1933}
-  m_SizeDelta: {x: 213.4272, y: 628.3166}
+  m_SizeDelta: {x: 250, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883164999
 MonoBehaviour:
@@ -7975,7 +7975,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 3a02707ba17ce2e4b983064dd320069f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9539c18e156dd6849a24e89c0faae2fd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10547,10 +10547,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 277689136}
   m_HandleRect: {fileID: 854798370}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
