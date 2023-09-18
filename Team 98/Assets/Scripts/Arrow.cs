@@ -7,7 +7,8 @@ public class Arrow : MonoBehaviour
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;
-    
+    [SerializeField] private int arrowDamageAmount = 20;
+
     // public float force;
 
     // Constant speed of arrow
@@ -49,6 +50,18 @@ public class Arrow : MonoBehaviour
     // What happens when arrow collides with an object/enemy: (need to add damage/impact logic)
     void OnTriggerEnter2D(Collider2D collider) 
     {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0);
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("enemy"))
+            {
+                Damageable enemyDamageable = hit.GetComponent<Damageable>();
+                if (enemyDamageable != null)
+                {
+                    enemyDamageable.TakeDamage(arrowDamageAmount);
+                }
+            }
+        }
         Destroy(gameObject);
     }
 }
