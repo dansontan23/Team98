@@ -65,7 +65,7 @@ public class Damageable : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             // Restart the game
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
 
         }
         else if (gameObject.CompareTag("enemy"))

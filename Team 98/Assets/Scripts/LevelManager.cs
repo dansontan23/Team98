@@ -16,9 +16,9 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void LoadStartMenu()
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadGameOver()
